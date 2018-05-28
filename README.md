@@ -1,4 +1,4 @@
-# RC4 and RC4 algorithms implementation
+# RC4 and ROT2 algorithms implementation
 
 ## Instructions
 

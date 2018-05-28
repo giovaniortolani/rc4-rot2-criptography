@@ -157,6 +157,7 @@ def main():
     '''
     Handles input arguments 
     '''
+    
     if len(sys.argv) == 6:
         if sys.argv[2] == 'C':
             key = readTextFile(sys.argv[3])
