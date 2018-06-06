@@ -31,7 +31,7 @@ def readTextFile(file):
                 byte_text.append(ord(byte)) # transforms into int representation
         return byte_text
     except IOError:
-            print("Could not open file.")
+        print("Could not open {} file.".format(file))
 
 def readHexFile(file):
     '''
@@ -49,7 +49,7 @@ def readHexFile(file):
                 byte_text.append(int('0X' + byte, 16))
         return byte_text
     except IOError:
-            print("Could not open file.")
+        print("Could not open {} file.".format(file))
 
 def writeTextFile(file, text):
     '''
@@ -64,7 +64,8 @@ def writeTextFile(file, text):
                 _text += chr(byte)  # converts int into char representation 
             f.write(_text)
     except IOError:
-            print("Could not open file.")
+        print("Could not open {} file.".format(file))
+
 
 def writeHexFile(file, text):
     '''
@@ -78,7 +79,7 @@ def writeHexFile(file, text):
                 #print(hex(byte), hex(byte)[2:], hexByte, hexByte[-2:].upper())
                 f.write(hexByte[-2:].upper())
     except IOError:
-            print("Could not open file.")
+        print("Could not open {} file.".format(file))
 
 def KSA(key):
     '''
@@ -182,7 +183,7 @@ def main():
             print("Argumento inválido. C - criptografia, D - descriptografia.")
     elif len(sys.argv) == 4 or len(sys.argv) == 5:
         if sys.argv[2] == 'K':
-            pass
+            print("Algoritmo não precisa de tipo especial de chave. Saindo...")
         else:
             print("Argumento inválido. K - gerar chave.")
     else:
