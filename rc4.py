@@ -147,9 +147,9 @@ def encrypt(key, plain):
     '''
     Generic encryption function with RC4 and ROT2 encryption
     '''
-    text = INVERT(text)
+
     text = ROT(2, plain)
-   
+    text = INVERT(text)
     return RC4(key, text)
 
 def decrypt(key, cipher):
