@@ -14,6 +14,7 @@
 '''
 
 import sys
+import math
 
 def readTextFile(file):
     '''
@@ -137,12 +138,17 @@ def ROT(n, text):
 
     return text
 
+def INVERT(text):
+    text = text[::-1]
+    return text
+
 def encrypt(key, plain):
     '''
     Generic encryption function with RC4 and ROT2 encryption
     '''
-
+    text = INVERT(text)
     text = ROT(2, plain)
+   
     return RC4(key, text)
 
 def decrypt(key, cipher):
@@ -151,6 +157,7 @@ def decrypt(key, cipher):
     '''
 
     text = RC4(key, cipher)
+    text = INVERT(text)
     return ROT(-2, text)
 
 def main():
