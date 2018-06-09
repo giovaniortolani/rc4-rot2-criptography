@@ -27,5 +27,9 @@ Open a terminal inside the project folder and run the commands bellow:
 
 - Giovani Ortolani Barbosa - [@giovaniortolani](https://github.com/giovaniortolani)
 
+## Collaborator
+
+- Luciano Augusto Campagnoli da Silva [@lucianosilva44](https://github.com/lucianosilva44)
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

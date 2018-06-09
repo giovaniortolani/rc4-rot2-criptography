@@ -3,7 +3,7 @@
 '''
     Trabalho 1 - Criptografia          
     SSC0747 - Engenharia de Segurança  
-    Giovani Ortolani Barbosa  8936648   
+    Giovani Ortolani Barbosa - 8936648   
     Gustavo Lima Lopes - 8910142
     Luciano Augusto Campagnoli da Silva - 9313367   
     
@@ -140,6 +140,10 @@ def ROT(n, text):
     return text
 
 def INVERT(text):
+    '''
+    Inverts a string
+    '''    
+
     text = text[::-1]
     return text
 
@@ -147,6 +151,7 @@ def encrypt(key, plain):
     '''
     Generic encryption function with RC4 and ROT2 encryption
     '''
+
     text = INVERT(plain)
     text = ROT(2, text)
     return RC4(key, text)
